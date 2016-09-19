@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SMART on FHIR Starter APP</title>
+  </head>
+  <body>
+    <div id="test">Send me a message!</div>
+	<script>
+	function listener(event){
+	  
+	  document.getElementById("test").innerHTML = "received: "+event.data
+	}
+	 
+	if (window.addEventListener){
+	  addEventListener("message", listener, false)
+	} else {
+	  attachEvent("onmessage", listener)
+	}
+	</script>
+
+  </body>
+</html>
